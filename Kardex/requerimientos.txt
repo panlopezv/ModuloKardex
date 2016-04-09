@@ -1,0 +1,17 @@
+KARDEX
+Numero de kardex
+Departamento (Almacen)
+Articulo
+Mes
+	Fecha
+	Concepto
+	Precio unitario
+	Entradas
+		Unidades
+		Valor (total)
+	Salidas
+		Unidades
+		Valor (total)
+	Saldo
+		Unidades
+		Valor (total)
