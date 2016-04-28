@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record model='ir.ui.view' id='kardex_tree'>
+            <field name='name'>kardex.kardex.tree</field>
+            <field name='model'>kardex</field>
+            <field name='type'>tree</field>
+            <field name='arch' type='xml'>
+                <tree string='kardex'>
+                    <field name="nokardex"/>
+                    <field name="fecha"/>
+                    <field name="producto"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='kardex_form'>
+            <field name='name'>kardex.kardex.form</field>
+            <field name='model'>kardex</field>
+            <field name='type'>form</field>
+            <field name='arch' type='xml'>
+                <form string='kardex_form' version="7.0">
+                    <sheet>
+                        <group col="4">
+                            <field name="nokardex"/>
+                            <field name="fecha"/>
+                            <field name="producto"/>
+                        </group> 
+                    </sheet>
+                </form>
+            </field>  
+        </record>
+   
+        <record id="kardex_kardex" model="ir.actions.act_window">
+            <field name="name">Kardex</field>
+            <field name="res_model">kardex</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_kardex_main" name="Kardex" sequence="1"/>
+        
+        <menuitem id="menu_opciones_main_sub" parent="menu_kardex_main" name="Opciones"/>
+        
+        <menuitem action="kardex_kardex" id="menu_kardex_kardex" sequence="30" parent="menu_opciones_main_sub"/>
+        
+    </data>
+</openerp>
